@@ -5,7 +5,7 @@ dbt_project:
     test:
       type: bigquery
       method: service-account
-      keyfile: C:\Users\umerg\OneDrive\Documents\dbt\dbt_project\service_account.json
+      keyfile: #add path to service_account.json file
       project: dbt-project-ug-sk
       dataset: dbt_project
       threads: 1
