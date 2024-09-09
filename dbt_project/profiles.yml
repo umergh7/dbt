@@ -1,0 +1,14 @@
+test_project:
+  target: test
+  
+  outputs:
+    test:
+      type: bigquery
+      method: service-account
+      keyfile: 
+      project: dbt-project-ug-sk
+      dataset: dbt_project
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
