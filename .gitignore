@@ -104,3 +104,6 @@ venv/
 
 # poetry
 poetry.lock
+
+# Sensitive files
+service_account.json

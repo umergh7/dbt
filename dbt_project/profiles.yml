@@ -1,11 +1,11 @@
-test_project:
+dbt_project:
   target: test
   
   outputs:
     test:
       type: bigquery
       method: service-account
-      keyfile: 
+      keyfile: C:\Users\umerg\OneDrive\Documents\dbt\dbt_project\service_account.json
       project: dbt-project-ug-sk
       dataset: dbt_project
       threads: 1
