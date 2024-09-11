@@ -1,0 +1,73 @@
+version: 2
+
+sources:
+  - name: g_ads_data
+    database: weclouddwh
+    schema: g_ads
+    tables:
+      - name: campaign_main
+        identifier: campaign
+        loaded_at_field: date
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: ad_group_main
+        identifier: ad_group
+        loaded_at_field: date
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: ad_group_ad_main
+        identifier: ad_group_ad
+        loaded_at_field: date
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: ad_group_ad_legacy_main
+        identifier: ad_group_ad_legacy
+        loaded_at_field: date
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: keyword_main
+        identifier: keyword_view
+        loaded_at_field: date
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 24, period: hour}
+
+# "ad_group_criterion"
+# "ad_group_criterion_label"
+# "ad_group_label"
+# "ad_group_ad_label"
+# "ad_group"
+# "ad_group_ad"
+# "ad_group_ad_legacy"
+# "ad_group_bidding_strategy"
+
+# "ad_listing_group_criterion"
+
+# "campaign"
+# "campaign_budget"
+# "campaign_bidding_strategy"
+# "campaign_criterion"
+# "campaign_label"
+
+
+# "label"
+# "customer_label"
+# "customer"
+
+
+# "account_performance_report"
+
+# "user_location_view"
+# "geographic_view"
+# "display_keyword_view"
+# "keyword_view"
+# "click_view"
+# "topic_view"
+# "shopping_performance_view"
+
+# "user_interest"
+# "audience"

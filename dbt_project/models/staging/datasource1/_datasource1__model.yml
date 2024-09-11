@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: stg_gads__campaign
+  - name: stg_gads__ad_group
+  - name: stg_gads__ad_group_ad
+  - name: stg_gads__ad_group_ad_legacy
