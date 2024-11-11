@@ -5,7 +5,7 @@ dbt_project:
     test:
       type: bigquery
       method: service-account
-      keyfile: /Users/umer.ghani/Documents/dbt/dbt_project/service_account.json
+      keyfile: 
       project: dbt-project-ug-sk
       dataset: dbt_project
       threads: 1
