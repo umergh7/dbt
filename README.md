@@ -3,7 +3,7 @@
 #Local Setup - Windows
 Setup a python virtual env (`venv`) with the following:
 ```
-python -m venv venv
+python3 -m venv venv
 source ./venv/Scripts/activate
 pip install --upgrade pip
 pip install -r requirements.txt
@@ -11,7 +11,7 @@ pip install -r requirements.txt
 #Local Setup - Mac
 Setup a python virtual env (`venv`) with the following:
 ```
-python -m venv venv
+python3 -m venv venv
 source ./venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
