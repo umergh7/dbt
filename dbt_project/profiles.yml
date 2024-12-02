@@ -5,8 +5,8 @@ dbt_project:
     test:
       type: bigquery
       method: service-account
-      keyfile: 
-      project: dbt-project-ug-sk
+      keyfile: "{{ env_var('GOOGLE_CLOUD_CREDENTIALS') }}"
+      project: consulting-project-1
       dataset: dbt_project
       threads: 1
       timeout_seconds: 300
