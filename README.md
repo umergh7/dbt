@@ -28,7 +28,10 @@ chmod +x ./.env
 . ./.env
 export GOOGLE_CLOUD_CREDENTIALS
 ```
-
+#docker-compose.airflow
+- Navigate to `docker-compose.airflow.yaml`
+- Run docker compose -f "docker-compose.airflow.yaml" up -d 
+- Copy `/opt/airflow/.google/GOOGLE_APPLICATION_CREDENTIALS.json` and save it under the google cloud connection under the Keyfile path
 
 #Test Connection
 - `cd dbt_project`
