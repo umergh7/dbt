@@ -20,7 +20,18 @@ pip install -r requirements.txt
 #Setup Service Account Credentials
 - Navigate to `dbt_project` --> `service_account.json`
 - Copy your service account credentials into `service_account.json` and click save.
-- Copy the path to your `service_account.json` file and save it under `keyfile` in your `profiles.yml` file.
+- Copy the path to your `service_account.json` file and save it in the .env folder under `GOOGLE_CLOUD_CREDENTIALS`
+- Run the following command:
+
+```
+chmod +x ./.env                
+. ./.env
+export GOOGLE_CLOUD_CREDENTIALS
+```
+#docker-compose.airflow
+- Navigate to `docker-compose.airflow.yaml`
+- Run docker compose -f "docker-compose.airflow.yaml" up -d 
+- Copy `/opt/airflow/.google/GOOGLE_APPLICATION_CREDENTIALS.json` and save it under the google cloud connection under the Keyfile path
 
 #Test Connection
 - `cd dbt_project`
