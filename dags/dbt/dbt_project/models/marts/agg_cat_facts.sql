@@ -1,3 +1,7 @@
+{{ config(
+    tags=["cats"]
+) }}
+
 SELECT
 fact,
 count(fact) as count

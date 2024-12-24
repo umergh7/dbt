@@ -2,3 +2,7 @@ dbt-core==1.8.6
 dbt-bigquery==1.8.2
 sqlalchemy-bigquery
 pybigquery
+astronomer-cosmos==1.7.1
+dbt-postgres
+apache-airflow-providers-google
+

@@ -56,7 +56,7 @@ with DAG(
             }
         },
         location="US",  # Replace with your BigQuery dataset location
-        gcp_conn_id="google_cloud_default",  # Airflow connection to GCP
+        gcp_conn_id="bigquery_conn",  # Airflow connection to GCP
     )
 
     # Task dependencies
