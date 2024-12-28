@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "consulting-project-1",
+    "private_key_id": "a667cac7c842e89fbd07cc488600d63d2fd5e86f",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnRVssDhGiEbB2\nqKcTEZa8jdKHAcOW7k7sESqGo0vTjBI6GqIUZI8qEby2xge7rRe9Ectf7uwmtAtt\nYR/zzUSkhUiWQMyO859BzhHgAMIkGZiTZdnjAyidpMFfRaz1leUlOC0K5Cb1nWl0\n6fcbEUYuWW1COVC23585zpWpG0PELy54esrTguilV2LU/qAcxz86kNW3SS/H+qql\nJB7BtJnEWQ7tzQzVHax8191v9TciV4tAbc7zei6mCp9rA8UAN2xRNFzMI61ugOyN\nNQVkvn0KGkV8FZvSevqKmuqbBD5hOMoI86eJRvPZ9eGjRWvOx6/QUrdsi6dDi77i\nnc/pJo0jAgMBAAECggEAEaZQqErfExtLuTwyzjZzvHc4fh9dByQjzBFES/WXZCh/\nqdrdPEqfYpXW3vBGqPJq3VEvL52zFE24y59NHaQMo1F0UcpfleaLPjMjZrVIcZez\n0OW/17jMbynkb4xCDkh1PSKleg84idUaEgiNQYa77DBqcMDsd9y2XS/4/GF7RTbL\ng/mqaYNpGYJv7z+/Zt72rDN2ajMOUEK2VHeHFzD72rOVDjULCRkZQEyUI/8gAEPu\nURHQdRm1PcvBcA5puodNKD4qHmMk0cgOAB7n69XSoeLKbfl2EG0NfGP5bxlGdJXE\nZlAv82T7VPtp2eX3vEHNL5Gwk1SyWET/u9YMym2a/QKBgQDcRqWOOoBWiLan3RM/\nwut8RiN+f21n5qE5+qcZoHukG3/qB6hy7wwp0zhMKDssPYVs6KN3RiJtvJ3Qd6n8\nbgWv6j7ZaFLawEyhsoVQfYD9FoXbVwsKJCVE5qMDaC/xFeogPVmDYMouHi76aUSd\nFWilr6hmspzdUM+NwwpTA5hD9QKBgQDCZg/DcV/QYFrOwtgrcebcGpVpH63oAIHJ\n49sybZYDmNCQgXHYzyEmmoaB0+MiipfQpm20dXFI5hS8M2HpQxAQw1yQUgFpC+T3\naSF3wXVYhgcgz3kyKs3nlr9ch+5DajxIimTqRKAJuOLwlMO7VfVpOxVvCe93nFFK\nRbJAxuN1twKBgQC8/awrtIvKMvAsZCSQz0dFz9PCQ8h1nc30tdbKyQNsEOAVxk5D\nlk/kTsH9rYLfeUVR5OPjgPwnFO5+Hz1sRGWCwkL8O2LjJpxZG5cAMT4LZ1ifkTX6\nlHqZfBye3rRLb9b5pEl5zACLwv/hf5IMCINJrMWan2KxDBWX9qCUCwCIRQKBgEJg\n6z0HN3pFjHxRV9Lt37CEe0QcBxvTIH45iZ1cgf7UbVMKgD9R6rXtycQG/+XJgTFD\nwu39tCL6PVZODT7DIXc33iGBfu3Jm/NHOKBVtKX3jfOMJIwWxZwwg0MrPxZR7ieu\n6ep8aFEpioQvp+4N2fCGtjjmIZisDa3YwpcP0pddAoGAW15OWyfQucXmrZZQ765R\nkNnWn/68NmOST4tOb1FRRn+Zlt3ul5dtOoB+mRl/iu4dGoh4PSJvr0MNn5GEVM3o\nbj4qw24LzGskv606wVxFYsd1bLoBaFFTsdIWabUPZ3UjvO6mr5xHLfL08koHqbVZ\nqlSaNUoJz6U8Xhs+qEpd+pw=\n-----END PRIVATE KEY-----\n",
+    "client_email": "umer-ghani@consulting-project-1.iam.gserviceaccount.com",
+    "client_id": "108626096890529930245",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/umer-ghani%40consulting-project-1.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
