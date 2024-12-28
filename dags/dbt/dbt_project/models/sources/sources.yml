@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: dbt_project
+    description: >
+      models for dbt_project
+    database: consulting-project-1
+
+    tags: # tags applied to all source tables in this schema
+      - "cats"
+      - "hourly"
+      - "source"
+
+    tables:
+      - name: cat_facts
+        description: >
+          Testing cat facts
+        columns:
+          - name: fact
+            description: fact about cats
+            tests:
+              - not_null
+          - name: created_at
+            description: ingestion_date

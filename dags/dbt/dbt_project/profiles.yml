@@ -1,0 +1,14 @@
+dbt_project:
+  target: test
+  
+  outputs:
+    test:
+      type: bigquery
+      method: service-account
+      keyfile: "{{ env_var('GOOGLE_CLOUD_CREDENTIALS') }}"
+      project: consulting-project-1
+      dataset: dbt_project
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive

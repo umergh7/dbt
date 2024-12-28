@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_cat_facts
+    description: >
+      Testing cat facts
+    columns:
+      - name: fact
+        description: fact for cat
+        tests:
+          - not_null
+      - name: created_at
+        description: ingestion date
+
