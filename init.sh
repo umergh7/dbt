@@ -9,8 +9,7 @@ else
 fi
 
 echo "Run docker containers"
-docker compose -f "docker-compose.superset.yaml" up -d
-docker compose -f "docker-compose.airflow.yaml" up -d
+astro dev start
 
 # Ensure the Airflow services are up and running (commented out for now)
 echo "Waiting for Airflow webserver and scheduler to be ready..."
