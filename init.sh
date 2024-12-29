@@ -11,20 +11,28 @@ fi
 echo "Run docker containers"
 astro dev start
 
-# Ensure the Airflow services are up and running (commented out for now)
-echo "Waiting for Airflow webserver and scheduler to be ready..."
-sleep 60  # Give it time for the containers to start
+# Dynamically find the webserver container ID
+webserver_container=$(docker ps -q --filter "name=webserver-1")
 
-# Unpause all Airflow DAGs (commented out for now)
-docker exec dbt_28921f-webserver-1 airflow dags list | tail -n +2 | awk '{print $1}' | grep -v '^==' | grep -v '^$' | while read -r dag_id; do
+if [ -z "$webserver_container" ]; then
+    echo "Webserver container not found. Please check if the container is running."
+    exit 1
+fi
+
+echo "Found webserver container: $webserver_container"
+
+# Unpause all Airflow DAGs
+echo "Unpausing all DAGs..."
+docker exec "$webserver_container" airflow dags list | tail -n +2 | awk '{print $1}' | grep -v '^==' | grep -v '^$' | while read -r dag_id; do
     echo "Unpausing DAG: $dag_id"
-    docker exec dbt_28921f-webserver-1 airflow dags unpause "$dag_id"
+    docker exec "$webserver_container" airflow dags unpause "$dag_id"
 done
 
-# Trigger all Airflow DAGs (commented out for now)
-docker exec dbt_28921f-webserver-1 airflow dags list | tail -n +2 | awk '{print $1}' | grep -v '^==' | grep -v '^$' | while read -r dag_id; do
+# Trigger all Airflow DAGs
+echo "Triggering all DAGs..."
+docker exec "$webserver_container" airflow dags list | tail -n +2 | awk '{print $1}' | grep -v '^==' | grep -v '^$' | while read -r dag_id; do
     echo "Triggering DAG: $dag_id"
-    docker exec dbt_28921f-webserver-1 airflow dags trigger "$dag_id"
+    docker exec "$webserver_container" airflow dags trigger "$dag_id"
 done
 
 echo "All DAGs triggered successfully."
