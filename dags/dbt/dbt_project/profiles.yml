@@ -5,7 +5,7 @@ dbt_project:
     test:
       type: bigquery
       method: service-account
-      keyfile: "{{ env_var('GOOGLE_CLOUD_CREDENTIALS') }}"
+      keyfile: "{{ env_var('HOME') }}/dbt/include/keyfile.json"
       project: consulting-project-1
       dataset: dbt_project
       threads: 1
