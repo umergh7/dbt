@@ -27,6 +27,9 @@ newgrp docker
 #install git
 sudo apt-get install -y git-all
 
+#install astronomer
+curl -sSL install.astronomer.io | sudo bash -sC
+
 echo "pulling dbt repo"
 cd $HOME || exit
 if [ ! -d "dbt" ]; then
