@@ -42,3 +42,17 @@ fi
 cd $HOME/dbt
 chmod +x ./init.sh
 ./init.sh
+
+# Provide service credentials
+cd $HOME
+
+# Check if the service account credentials file exists
+if [ ! -f service_account_credentials.json ]; then
+    touch service_account_credentials.json
+    echo "File service_account_credentials.json created."
+else
+    echo "File service_account_credentials.json already exists."
+fi
+
+# Copy the credentials file to the desired destination
+cp $HOME/service_account_credentials.json $HOME/dbt/include/keyfile.json
