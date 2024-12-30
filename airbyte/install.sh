@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/shaheerkhan/dbt
-sudo systemctl start docker
+cd $HOME/dbt
+abctl local uninstall
 curl -LsfS https://get.airbyte.com | bash -
-sudo abctl local install
+abctl local install --insecure-cookies
