@@ -36,3 +36,8 @@ docker exec "$webserver_container" airflow dags list | tail -n +2 | awk '{print 
 done
 
 echo "All DAGs triggered successfully."
+
+#Setup Airbyte containers
+cd $HOME/dbt/airbyte || exit
+chmod +x install.sh
+./install.sh
