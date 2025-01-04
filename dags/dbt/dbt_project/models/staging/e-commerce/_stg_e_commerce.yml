@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: stg_e_commerce_carts
+    description: >
+      Staging table for carts.
+    columns:
+      - name: id
+        description: Unique id for carts.
+        tests:
+          - not_null
+      - name: user_id
+        description: id associated with user.
+      - name: products
+        description: products & quantities in cart.
+      - name: date
+        description: Date of transaction.
+  - name: stg_e_commerce_jewelery_category
+    description: >
+      Staging table for jewelery category.
+    columns:
+      - name: id
+        description: Unique id for jewelery category.
+        tests:
+          - not_null
+          - unique
+      - name: title
+        description: title of product     
+      - name: image
+        description: image url of product
+      - name: price
+        description: price of product
+      - name: rating_rate
+        description: Average rating of product
+      - name: rating_count
+        description: Number of ratings.
+      - name: category
+        description: Category of product.
+      - name: description
+        description: description of product.
+  - name: stg_e_commerce_products
+    description: >
+      Staging table for products.
+    columns:
+      - name: id
+        description: Unique id for products.
+        tests:
+          - not_null
+          - unique
+      - name: title
+        description: title of product     
+      - name: image
+        description: image url of product
+      - name: price
+        description: price of product
+      - name: rating_rate
+        description: Average rating of product
+      - name: rating_count
+        description: Number of ratings.
+      - name: category
+        description: Category of product.
+      - name: description
+        description: description of product
+  - name: stg_e_commerce_users
+    description: >
+      Staging table for users.
+    columns:
+      - name: id
+        description: Unique id for products.
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: first name of user.
+      - name: last_name
+        description: last name of user.
+      - name: email
+        description: email of user.
+      - name: phone
+        description: Phone number of user.
+      - name: city
+        description: city of user.
+      - name: latitude
+        description: latitude of user.
+      - name: longitude
+        description: longitude of user.
+      - name: house_number
+        description: house_number of user.
+      - name: street
+        description: street of user.
+      - name: zipcode
+        description: zipcode of user.
+      - name: password
+        description: password of user.
+      - name: username
+        description: username of user.

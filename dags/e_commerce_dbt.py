@@ -12,11 +12,11 @@ profile_config = ProfileConfig(
     target_name="test",
     profile_mapping=GoogleCloudServiceAccountFileProfileMapping(
         conn_id="bigquery_conn",
-        profile_args={"project": "consulting-project-1", "dataset": "dbt_project", "keyfile": "/usr/local/airflow/include/keyfile.json",},
+        profile_args={"project": "consulting-project-1", "dataset": "e_commerce", "keyfile": "/usr/local/airflow/include/keyfile.json",},
     ),
 )
 
-my_cosmos_dag = DbtDag(
+e_commerce_dbt = DbtDag(
     project_config=ProjectConfig(
         f"{airflow_home}/dags/dbt/dbt_project",
     ),
@@ -25,12 +25,12 @@ my_cosmos_dag = DbtDag(
         dbt_executable_path=f"{airflow_home}/dbt_venv/bin/dbt",
     ),
     render_config=RenderConfig(
-        select=["tag:cats"],
+        select=["tag:e-commerce"],
     ),
     # normal dag parameters
     schedule_interval="@daily",
     start_date=datetime(2023, 1, 1),
     catchup=False,
-    dag_id="my_cosmos_dag",
+    dag_id="e_commerce_dbt",
     default_args={"retries": 0},
 )

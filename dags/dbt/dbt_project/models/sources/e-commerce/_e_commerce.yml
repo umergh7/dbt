@@ -1,0 +1,134 @@
+version: 2
+
+sources:
+  - name: e_commerce
+    description: >
+      Developing data models for e-commerce platform
+    database: consulting-project-1
+
+    tags: # tags applied to all source tables in this schema
+      - "e-commerce"
+      - "hourly"
+      - "source"
+
+    tables:
+      - name: carts
+        description: >
+          This table provides data on user's carts. Tells you what products and respective quantities are in peoples carts.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: date
+            description: Date of transaction.
+            tests:
+              - not_null
+          - name: userid
+            description: Unique id for user. Foreign key maps to user table.
+            tests:
+              - not_null
+          - name: products
+            description: Provides data on product and respective quantity.
+            tests:
+              - not_null
+      - name: jewelery_category
+        description: >
+          This table provides insight on jewelery category.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: image
+            description: Provides jpg url of jewelry product.
+            tests:
+              - not_null
+          - name: price
+            description: Price of product.
+            tests:
+              - not_null
+          - name: title
+            description: title of product.
+            tests:
+              - not_null
+          - name: rating
+            description: rating of product.
+            tests:
+              - not_null
+          - name: category
+            description: category of product.
+            tests:
+              - not_null
+          - name: description
+            description: description of product.
+            tests:
+              - not_null
+      - name: products
+        description: >
+          Provides data on products
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: image
+            description: Provides jpg url of  product.
+            tests:
+              - not_null
+          - name: price
+            description: Price of product.
+            tests:
+              - not_null
+          - name: title
+            description: title of product.
+            tests:
+              - not_null
+          - name: rating
+            description: Rating of product.
+            tests:
+              - not_null
+          - name: category
+            description: Category of product.
+            tests:
+              - not_null
+          - name: description
+            description: Description of product.
+            tests:
+              - not_null
+      - name: users
+        description: >
+          Provides data on users.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: name
+            description: Name of user
+            tests:
+              - not_null
+          - name: email
+            description: email of user
+            tests:
+              - not_null
+          - name: phone
+            description: phone of user
+            tests:
+              - not_null
+          - name: address
+            description: address of user
+            tests:
+              - not_null
+          - name: password
+            description: password of user
+            tests:
+              - not_null
+          - name: username
+            description: username of user
+            tests:
+              - not_null

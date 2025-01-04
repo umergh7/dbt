@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: marts_e_commerce_daily_trends
+    description: >
+      periodic daily table.
+    columns:
+      - name: transaction_date
+        description: transaction_date
+        tests:
+          - not_null
+          - unique
+      - name: daily_revenue
+        description: revenue for that day.
+      - name: daily_quantity_sold
+        description: quantity of products sold.
+      - name: daily_active_users
+        description: active users for the day.
+  - name: marts_e_commerce_product_performance
+    description: >
+      product performance table.
+    columns:
+      - name: id
+        description: transaction_date
+        tests:
+          - not_null
+          - unique
+      - name: product_id
+        description: FK for product.
+      - name: title
+        description: title of product.
+      - name: category
+        description: category of product.
+      - name: price
+        description: price for that product.
+      - name: total_carts
+        description: total carts that product went into.
+      - name: total_quantity_sold
+        description: total product quantity sold.
+      - name: total_revenue
+        description: Revenue for that product.
+      - name: distinct_users
+        description: distinct users for that product.
+      - name: conversion_rate
+        description: conversion rate of the product.
+      - name: revenue_per_rating_point
+        description: revenue for the rating.
+      - name: max_rating
+        description: max rating for that product.
+      - name: min_rating
+        description: min rating for that product.
+  - name: marts_e_commerce_user_activity
+    description: >
+      product performance table.
+    columns:
+      - name: id
+        description: transaction_date
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        description: FK for user.
+      - name: first_name
+        description: first name of user.
+      - name: last_name
+        description: last name of user.
+      - name: city
+        description: city of user.
+      - name: total_carts
+        description: totals carts created per user.
+      - name: total_products_added
+        description: total products added to cart per user.
+      - name: avg_cart_size
+        description: average cart size per user.
+      - name: potential_spending
+        description: potential spending per user.
+  
