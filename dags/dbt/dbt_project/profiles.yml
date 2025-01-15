@@ -7,7 +7,7 @@ dbt_project:
       method: service-account
       keyfile: "{{ env_var('HOME') }}/dbt/include/keyfile.json"
       project: consulting-project-1
-      dataset: e_commerce
+      dataset: raw_datalake
       threads: 1
       timeout_seconds: 300
       location: US
