@@ -110,3 +110,74 @@ sources:
             description: json object of all form data.
           - name: created_at
             description: timestamp of when form submitted.
+      - name: spectra_appsheet_sales
+        description: >
+          jotform submissions data.
+        columns:
+          - name: _rownumber
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: name
+            description: name of equipment.
+          - name: customer
+            description: customer who rented equipment
+          - name: quantity
+            description: quantity of equipment.
+          - name: timestamp
+            description: timestamp of log.
+          - name: current_stock
+            description: current stock.
+          - name: product_barcode
+            description: product barcode number.
+      - name: spectra_appsheet_purchases
+        description: >
+          appsheet purchases data.
+        columns:
+          - name: _rownumber
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: source
+            description: customer who returned.
+          - name: product
+            description: product.
+          - name: quantity
+            description: quantity of equipment.
+          - name: timestamp
+            description: timestamp of log.
+          - name: product_barcode
+            description: product barcode number.
+      - name: spectra_appsheet_products
+        description: >
+          appsheet purchases data.
+        columns:
+          - name: _rownumber
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: image
+            description: image of product
+          - name: product
+            description: name of product.
+          - name: category
+            description: category of product.
+          - name: min_order
+            description: min qty of order.
+          - name: current_stock
+            description: current stock.
+          - name: initial_stock
+            description: product barcode number.
+          - name: initial_stock
+            description: initial_stock.
+          - name: Related_Sales
+            description: Related_Sales
+          - name: Restock_Level
+            description: Restock_Level
+          - name: Product_Barcode
+            description: Product_Barcode
+          - name: Related_Purchases
+            description: Related_Purchases
