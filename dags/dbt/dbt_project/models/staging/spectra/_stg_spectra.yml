@@ -1,0 +1,26 @@
+# version: 2
+
+# models:
+#   - name: stg_e_commerce_carts
+#     description: >
+#       Staging table for carts.
+#     columns:
+#       - name: id
+#         description: Unique id for carts.
+#         tests:
+#           - not_null
+#       - name: user_id
+#         description: id associated with user.
+#       - name: products
+#         description: products & quantities in cart.
+#       - name: date
+#         description: Date of transaction.
+#   - name: stg_e_commerce_jewelery_category
+#     description: >
+#       Staging table for jewelery category.
+#     columns:
+#       - name: id
+#         description: Unique id for jewelery category.
+#         tests:
+#           - not_null
+#           - unique

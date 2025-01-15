@@ -1,0 +1,112 @@
+version: 2
+
+sources:
+  - name: raw_datalake
+    description: >
+      This is a project for Spectra Scientific.
+    database: consulting-project-1
+
+    tags: # tags applied to all source tables in this schema
+      - "spectra"
+      - "hourly"
+      - "source"
+
+    tables:
+      - name: incident_log_entries
+        description: >
+          PagerDuty logs.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: self
+            description: Link to incident.
+          - name: type
+            description: type of action (trigger, resolve, acknowledge, etc.)
+          - name: service
+            description: service of pagerduty request.
+          - name: summary
+            description: Summary of log.
+          - name: html_url
+            description: html link to incident.
+          - name: incident
+            description: json object of incident.
+          - name: created_at
+            description: log created at date, timestamp data type.
+          - name: event_details
+            description: event details information.
+      - name: incidents
+        description: >
+          PagerDuty incident data.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: self
+            description: Link to incident.
+          - name: type
+            description: type of action. Will always be incident.
+          - name: title
+            description: tile of incident.
+          - name: status
+            description: Current status of incident.
+          - name: service
+            description: json object on service.
+          - name: summary
+            description: summary of incident.
+          - name: urgency
+            description: urgency of incident.
+          - name: html_url
+            description: html of incident.
+          - name: priority
+            description: priority of incident.
+          - name: created_at
+            description: timestamp of when case created.
+          - name: assignments
+            description: nothing really.
+          - name: description
+            description: description of incident.
+          - name: incident_key
+            description: key associated with incident.
+          - name: acknowledgements
+            description: nothing really.
+          - name: last_status_change_at
+            description: timestamp where status changed at.
+      - name: users
+        description: >
+          PagerDuty incident data.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: name
+            description: name of pagerduty user.
+          - name: self
+            description: link to pagerduty user.
+          - name: type
+            description: going to be user.
+          - name: email
+            description: email of user.
+          - name: summary
+            description: full name.
+          - name: html_url
+            description: html url for user.
+      - name: submissions
+        description: >
+          jotform submissions data.
+        columns:
+          - name: id
+            description: Primary key for table.
+            tests:
+              - not_null
+              - unique
+          - name: answers
+            description: json object of all form data.
+          - name: created_at
+            description: timestamp of when form submitted.
