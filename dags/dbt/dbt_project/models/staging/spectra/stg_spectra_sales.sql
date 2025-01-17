@@ -2,8 +2,8 @@ SELECT
     _RowNumber AS id,
     name as product_name,
     customer,
-    quantity,
-    current_stock,
+    CAST(quantity AS INT) AS quantity,
+    CAST(current_stock AS INT) AS current_stock,
     product_barcode,
-    timestamp
+    PARSE_TIMESTAMP('%m/%d/%Y %H:%M:%S', timestamp) AS timestamp
 FROM {{ source('raw_datalake', 'spectra_appsheet_sales') }}
